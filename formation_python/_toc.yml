@@ -1,0 +1,9 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: 0.Introduction
+chapters:
+- file: 1.Les langages de programmation et Python
+- file: 2.Pour commencer Python
+- file: 3.Première manipulation

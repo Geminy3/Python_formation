@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Pour commencer Python &#8212; Formation Python</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Premières manipulations" href="3.Premi%C3%A8re%20manipulation.html" />
+    <link rel="prev" title="2. Les langages de programmation et Python" href="1.Les%20langages%20de%20programmation%20et%20Python.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Formation Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0.Introduction.html">
+                    <div id="Introduction">1. Introduction</div>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.Les%20langages%20de%20programmation%20et%20Python.html">
+   <div id="Les_langages_de_programmation_et_Python">
+    2. Les langages de programmation et Python
+   </div>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <div id="Pour_commencer_Python">
+    3. Pour commencer Python
+   </div>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.Premi%C3%A8re%20manipulation.html">
+   <div id="Première_manipulation">
+    4. Premières manipulations
+   </div>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/2.Pour commencer Python.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F2.Pour commencer Python.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/2.Pour commencer Python.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#div-id-installation-anaconda-3-1-installation-avec-i-anaconda-i-div">
+   <div id="installation_anaconda">
+    3. 1. Installation avec
+    <i>
+     Anaconda
+    </i>
+   </div>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#div-id-installation-brute-3-2-installation-i-brute-i-div">
+   <div id="installation_brute">
+    3. 2. Installation
+    <i>
+     brute
+    </i>
+   </div>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#div-id-environnement-jupyter-3-3-l-environnement-jupyter-div">
+   <div id="Environnement_Jupyter">
+    3. 3. L’environnement Jupyter
+   </div>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#div-id-le-markdown-2-2-2-le-markdown-div">
+     <div id="Le Markdown">
+      2. 2. 2. Le Markdown
+     </div>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><div id="Pour_commencer_Python">3. Pour commencer Python</div></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#div-id-installation-anaconda-3-1-installation-avec-i-anaconda-i-div">
+   <div id="installation_anaconda">
+    3. 1. Installation avec
+    <i>
+     Anaconda
+    </i>
+   </div>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#div-id-installation-brute-3-2-installation-i-brute-i-div">
+   <div id="installation_brute">
+    3. 2. Installation
+    <i>
+     brute
+    </i>
+   </div>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#div-id-environnement-jupyter-3-3-l-environnement-jupyter-div">
+   <div id="Environnement_Jupyter">
+    3. 3. L’environnement Jupyter
+   </div>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#div-id-le-markdown-2-2-2-le-markdown-div">
+     <div id="Le Markdown">
+      2. 2. 2. Le Markdown
+     </div>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="div-id-pour-commencer-python-3-pour-commencer-python-div">
+<h1><div id="Pour_commencer_Python">3. Pour commencer Python</div><a class="headerlink" href="#div-id-pour-commencer-python-3-pour-commencer-python-div" title="Permalink to this headline">#</a></h1>
+<p>Comme nous l’avons vu, python est un langage de programmation assez permissif. Mais ce dernier n’en est pas moins facile d’accès si on a pas l’habitude de programmer. Dans le cadre de cette formation, l’ensemble de l’installation de python et des modules utilisées pour faire fonctionner le code est téléchargé sur le serveur sur lequel vous êtes connecté. Pour utiliser python sur votre ordinateur voici deux façons pour l’installer.</p>
+<section id="div-id-installation-anaconda-3-1-installation-avec-i-anaconda-i-div">
+<h2><div id="installation_anaconda">3. 1. Installation avec <i>Anaconda</i></div><a class="headerlink" href="#div-id-installation-anaconda-3-1-installation-avec-i-anaconda-i-div" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="div-id-installation-brute-3-2-installation-i-brute-i-div">
+<h2><div id="installation_brute">3. 2. Installation <i>brute</i></div><a class="headerlink" href="#div-id-installation-brute-3-2-installation-i-brute-i-div" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="div-id-environnement-jupyter-3-3-l-environnement-jupyter-div">
+<h2><div id="Environnement_Jupyter">3. 3. L’environnement Jupyter</div><a class="headerlink" href="#div-id-environnement-jupyter-3-3-l-environnement-jupyter-div" title="Permalink to this headline">#</a></h2>
+<p>Parmi ces outils, on compte <strong>Jupyter</strong>. Il s’agit d’une forme d’<strong>éditeur de code</strong> qui permet, à la fois :</p>
+<ul class="simple">
+<li><p>D’écrire du code Python fonctionnel et que l’on peut directement exécuter</p></li>
+<li><p>D’écrire du texte comme on pourrait le faire avec un éditeur de texte classique</p></li>
+</ul>
+<p>Jupyter est un outil particulièrement utile lorsqu’on souhaite expérimenter, effectuer des tests ou écrire rapidement un petit script pour remplir une tâche minimale. Il est également possible d’écrire des programmes plus complexes dans un notebook Jupyter bien que, dans ce cas là, on préférera passer par l’utilisation d’un <strong>IDE (Environnement de développement)</strong> plus adapté. Il en existe de très nombreux, bien que ceux utilisés majoritairement pour développement en Python le sont moins (voir <a href="https://wiki.python.org/moin/PythonEditors">ce lien</a> pour une liste des IDE pour Python).</p>
+<p>Dans notre cas, <strong>Jupyter</strong> sera beaucoup plus utile dans la mesure où il permet également de produire des documents propres (exportables en PDF notamment), intégrant le code Python ainsi que des analyses associées, des commentaires ou une documentation de ce même code.</p>
+<p><strong>Jupyter</strong> sous la forme d’une page web disposant d’un menu dédié et fonctionnant à l’aide de <strong>cellules</strong>. Une cellule peut contenir :</p>
+<ul class="simple">
+<li><p>Du code Python</p></li>
+<li><p>Du texte, des images, des liens externes (n’importe quel contenu que l’on peut afficher sur un document HTML)</p></li>
+</ul>
+<p>On peut exécuter une cellule indépendamment d’une autre. Cela permet de découper un code complexe en plusieurs étapes élémentaires successives.</p>
+<p>Si l’on peut utiliser le menu de Jupyter pour exécuter les tâches que l’on souhaite, intégrer les raccourcis au fur et à mesure est bien utile pour gagner du temps. Ainsi, pour <strong>exécuter une cellule</strong>, on peut utiliser la combinaison <code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">entrée</span></code>.</p>
+<p><strong>Quelques raccourcis utiles :</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Action</p></th>
+<th class="head"><p>Raccourci</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Exécuter une cellule</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Entrée</span></code> ou <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Entrée</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Quitter la cellule sélectionnée</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Esc</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Entrer dans la cellule active</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Entrée</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Passer la cellule en mode code</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Esc</span> <span class="pre">+</span> <span class="pre">Y</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Passer la cellule en mode texte</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Esc</span> <span class="pre">+</span> <span class="pre">M</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Copier la cellule active</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Esc</span> <span class="pre">+</span> <span class="pre">C</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Coller le contenu sur la cellule active</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Esc</span> <span class="pre">+</span> <span class="pre">V</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Supprimer la cellule sélectionnée</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Esc</span> <span class="pre">+</span> <span class="pre">D,</span> <span class="pre">D</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Afficher tous les raccourcis</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Esc</span> <span class="pre">+</span> <span class="pre">H</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Pour avoir un environnement complet de programmation, on peut également utiliser <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a>, qui est installé avec Anaconda.</p>
+<section id="div-id-le-markdown-2-2-2-le-markdown-div">
+<h3><div id="Le Markdown">2. 2. 2. Le Markdown</div><a class="headerlink" href="#div-id-le-markdown-2-2-2-le-markdown-div" title="Permalink to this headline">#</a></h3>
+<p>Les cellules d’un <strong>notebook Jupyter</strong> en <strong>mode texte</strong> interprètent un langage que l’on nomme <strong>Markdown</strong> : il s’agit d’une version du <strong>langage HTML</strong> simplifié qui permet de <strong>structurer des documents textes</strong>.</p>
+<p>Pour passer une cellule en <strong>mode texte</strong>, on peut utiliser le raccourci <code class="docutils literal notranslate"><span class="pre">Esc</span> <span class="pre">+</span> <span class="pre">M</span></code>.</p>
+<p>Une fois que l’on se situe dans une cellule texte, on peut écrire du texte et le structurer ou ajouter des éléments de mise en forme à l’aide du <strong>Markdown</strong>.</p>
+<p>Il ne s’agira pas ici de faire une liste exhaustive de ce que l’on peut faire avec le Markdown, mais voyons tout de même rapidement quelques éléments utiles.</p>
+<p>Pour insérer des <strong>titres</strong>, on peut utiliser simplement un dièse <code class="docutils literal notranslate"><span class="pre">#</span></code> et entrer à la suite d’un espace le nom que l’on choisit pour ce titre. Selon le nombre de dièses que l’on accole à la suite (sans espace) l’un de l’autre, on pourra définir un titre de niveau différent :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> : Titre de niveau 1 (le plus grand qui soit)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">##</span></code> : Titre de niveau 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">###</span></code> : Titre de niveau 3</p></li>
+</ul>
+<p>Pour ajouter des <strong>liens hypertextes</strong>, on peut utiliser une combinaison de crochets et de parenthèses, comme suit :</p>
+<ul class="simple">
+<li><p>Entre crochets, on insère le texte que l’on veut rendre cliquable : <code class="docutils literal notranslate"><span class="pre">[Ceci</span> <span class="pre">est</span> <span class="pre">un</span> <span class="pre">lien]</span></code></p></li>
+<li><p>Une fois que l’on a refermé le crochet, on insère tout de suite (sans espace), une paire de parenthèses entre lesquelles on ajoute l’<strong>adresse URL</strong> : <code class="docutils literal notranslate"><span class="pre">(http://www.mon_site_web.com/mon_lien)</span></code></p></li>
+</ul>
+<p>Pour insérer ajouter du texte en gras ou en italique, on encadre le segment de texte que l’on souhaite modifier :</p>
+<ul class="simple">
+<li><p>Entre deux étoiles pour l’italique : <code class="docutils literal notranslate"><span class="pre">*Ceci</span> <span class="pre">est</span> <span class="pre">en</span> <span class="pre">italique*</span></code></p></li>
+<li><p>Entre quatre étoiles pour le gras (deux avant et deux après) : <code class="docutils literal notranslate"><span class="pre">**Ceci</span> <span class="pre">est</span> <span class="pre">en</span> <span class="pre">gras**</span></code></p></li>
+<li><p>En gras et en italique, entre trois étoiles (trois avant et trois après) : <code class="docutils literal notranslate"><span class="pre">***Ceci</span> <span class="pre">est</span> <span class="pre">en</span> <span class="pre">gras</span> <span class="pre">et</span> <span class="pre">en</span> <span class="pre">italique***</span></code></p></li>
+</ul>
+<p>Pour ajouter des tableaux, c’est un peu plus compliqué, mais c’est possible et cela rend même très bien ! L’idée est d’encadrer les éléments de chaque ligne entre deux <strong>barres obliques</strong> <code class="docutils literal notranslate"><span class="pre">|</span></code>. A chaque fois que l’on veut ajouter une ligne au tableau, on ajoute une nouvelle barre oblique. Une nouvelle colonne est ajoutée à l’aide d’un simple retour à la ligne. Entre la ligne d’en-tête et les lignes du reste du tableau, on ajoute simplement deux barres obliques contenant trois tirets <code class="docutils literal notranslate"><span class="pre">|---|</span></code>. Un exemple de tableau très simple ci-dessous :</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>|Première colonne|Deuxième colonne|
+|---|---|
+|Valeur 1|Valeur 2|
+</pre></div>
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Première colonne</p></th>
+<th class="head"><p>Deuxième colonne</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Valeur 1</p></td>
+<td><p>Valeur 2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1.Les%20langages%20de%20programmation%20et%20Python.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><div id="Les_langages_de_programmation_et_Python">2. Les langages de programmation et Python</div></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3.Premi%C3%A8re%20manipulation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><div id="Première_manipulation">4. Premières manipulations</div></p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Alioscha Massein<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
