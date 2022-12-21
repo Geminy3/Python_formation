@@ -369,9 +369,23 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#div-id-le-markdown-2-2-2-le-markdown-div">
+    <a class="reference internal nav-link" href="#div-id-environnement-jupyter-3-3-1-installation-et-lancement-de-jupyter-div">
+     <div id="Environnement_Jupyter">
+      3. 3. 1. Installation et lancement de Jupyter
+     </div>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#div-id-environnement-jupyter-3-3-2-quelques-astuces-div">
+     <div id="Environnement_Jupyter">
+      3. 3. 2. Quelques astuces
+     </div>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#div-id-le-markdown-3-4-le-markdown-div">
      <div id="Le Markdown">
-      2. 2. 2. Le Markdown
+      3. 4. Le Markdown
      </div>
     </a>
    </li>
@@ -424,9 +438,23 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#div-id-le-markdown-2-2-2-le-markdown-div">
+    <a class="reference internal nav-link" href="#div-id-environnement-jupyter-3-3-1-installation-et-lancement-de-jupyter-div">
+     <div id="Environnement_Jupyter">
+      3. 3. 1. Installation et lancement de Jupyter
+     </div>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#div-id-environnement-jupyter-3-3-2-quelques-astuces-div">
+     <div id="Environnement_Jupyter">
+      3. 3. 2. Quelques astuces
+     </div>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#div-id-le-markdown-3-4-le-markdown-div">
      <div id="Le Markdown">
-      2. 2. 2. Le Markdown
+      3. 4. Le Markdown
      </div>
     </a>
    </li>
@@ -447,24 +475,57 @@ title="Print to PDF"
 <p>Comme nous l’avons vu, python est un langage de programmation assez permissif. Mais ce dernier n’en est pas moins facile d’accès si on a pas l’habitude de programmer. Dans le cadre de cette formation, l’ensemble de l’installation de python et des modules utilisées pour faire fonctionner le code est téléchargé sur le serveur sur lequel vous êtes connecté. Pour utiliser python sur votre ordinateur voici deux façons pour l’installer.</p>
 <section id="div-id-installation-anaconda-3-1-installation-avec-i-anaconda-i-div">
 <h2><div id="installation_anaconda">3. 1. Installation avec <i>Anaconda</i></div><a class="headerlink" href="#div-id-installation-anaconda-3-1-installation-avec-i-anaconda-i-div" title="Permalink to this headline">#</a></h2>
+<p><a href="https://www.anaconda.com/">Anaconda</a> est un logiciel qui permet d’installer et de gérer python et ses <em>dépendances</em> (cad les fichiers que l’on charge pour utiliser python) avec une interface graphique accessible. De plus, Anaconda met à disposition un certain nombre d’IDLE, c’est-à-dire de logiciel pour éditer votre futur code source, et propose la gestion des packages pour chacun de vos projets. Anaconda ne se limite pas qu’à l’utilisation de Python, il permet également d’installer R et Rstudio, ainsi que d’autres logiciels faisant parties de l’éco-système de la <em>data-science</em>.En somme, Anaconda est très pratique si vous n’avez jamais ouvert un terminal ou un invité de commande de votre vie.</p>
+<p>Une fois le fichier d’installation téléchargé et exécuté, python est installé sur votre ordinateur ainsi que plusieurs applications ppour l’utiliser :</p>
+<div align="center"><img src="capture_anaconda.PNG"/></div>
+<p>En particulier, vous pourrez utiliser Spyder pour l’édition de votre code, mais aussi la suite Jupyter sur laquelle nous reviendrons.</p>
+<div class="alert alert-success" role="alert"><b>Anaconda</b> a plusieurs <b>avantages</b> et <b>inconvénients</b>:
+<ul> <li>Le plus gros avantage est le fait de pouvoir gérer tout ce qui est relatif à python depuis cette interface graphique : la gestion des librairires, des environnements virtuels,...</li>
+<li>C'est également ce qui en constitue sont inconvénients dans la mesure où toutes les fonctions natives de python passent pas Anaconda : en particulier vous n'utiliserez pas la fonction 'pip' pour l'installation, mais la fonction 'conda', ce qui va faire que vous n'utiliserez jamais les environnements virtuels proposé par Conda.</li></ul></div>
+<p>De plus, si les lignes de commandes ne vous effraie pas, il est plus recommandable de faire votre propre installation de python et d’installer vos librairies et modules dans votre terminal.</p>
 </section>
 <section id="div-id-installation-brute-3-2-installation-i-brute-i-div">
 <h2><div id="installation_brute">3. 2. Installation <i>brute</i></div><a class="headerlink" href="#div-id-installation-brute-3-2-installation-i-brute-i-div" title="Permalink to this headline">#</a></h2>
+<p>L’installation de python n’est pas beaucoup plus compliqué si l’on utilise les <a href="https://www.python.org/downloads/">fichiers d’installation</a> du site officiel. Si vous utilisez les versions dénommées “installer”, vous n’aurez qu’à double-cliquez sur le fichier téléchargé et le tour sera joué. Pour vérifier que python est bien installé sur votre ordinateur vous pouvez ouvrir un terminal ou un invité de commande et écrire “python -V”. Le résultat attendu est la version que vous avez installé de python :</p>
+<div align="center"><img src="capture_vers_py.PNG"/></div>
+<p>Le résultat attendu est le même pour le terminal sous Mac Os ou sous Linux. Vous pouvez dès à présent utiliser python directement dans votre terminal ou invité de commande :</p>
+<div align="center"><img src="Capture_python_exec.PNG"/></div>
+<p>Cependant, il n’est pas conseillé d’utiliser python directement dans votre termial :</p>
+<ul class="simple">
+<li><p>D’abord parce que vous ne pourrez pas corriger votre code</p></li>
+<li><p>Parce que vous ne pourrez pas l’enregistrer simplement</p></li>
+<li><p>Parce que vous ne bénéficier d’aucun avantage d’un IDLE, même simple (coloriage des parties du codes, auto-complétion,…).</p></li>
+</ul>
+<div class="alert alert-danger" role="alert"><b>C'est pourquoi il vous faut un IDLE qui vous permettent d'éditer votre code facilement.</b> 
+<br>
+<br>
+C'est outils sont nombreux, et je ne vous ferais pas une liste exhaustive ici, mais vous pouvez vous intéressez à des outils tels que CotEditor (pour MacOs et Linux) ou Notepad++ pour Windows, mais aussi à des logiciels avec beaucoup de fonctionnalités comme VisualCode, ou Pycharm. Tout ces logiciels permettent d'éditer des fichiers textes, c'est-à-dire votre code source, avec plus ou moins de simplicité. Il en existe de très nombreux, bien que ceux utilisés majoritairement pour développement en Python le sont moins (voir <a href="https://wiki.python.org/moin/PythonEditors">ce lien</a> pour une liste des IDE pour Python).C'est-à-vous de voir l'IDLE qui vous convient le mieux.</div>
 </section>
 <section id="div-id-environnement-jupyter-3-3-l-environnement-jupyter-div">
 <h2><div id="Environnement_Jupyter">3. 3. L’environnement Jupyter</div><a class="headerlink" href="#div-id-environnement-jupyter-3-3-l-environnement-jupyter-div" title="Permalink to this headline">#</a></h2>
-<p>Parmi ces outils, on compte <strong>Jupyter</strong>. Il s’agit d’une forme d’<strong>éditeur de code</strong> qui permet, à la fois :</p>
+<p>Parmi ces outils et logiciels, on compte <strong>Jupyter</strong>. Il s’agit d’une forme d’<strong>éditeur de code</strong> qui permet, à la fois :</p>
 <ul class="simple">
 <li><p>D’écrire du code Python fonctionnel et que l’on peut directement exécuter</p></li>
 <li><p>D’écrire du texte comme on pourrait le faire avec un éditeur de texte classique</p></li>
 </ul>
-<p>Jupyter est un outil particulièrement utile lorsqu’on souhaite expérimenter, effectuer des tests ou écrire rapidement un petit script pour remplir une tâche minimale. Il est également possible d’écrire des programmes plus complexes dans un notebook Jupyter bien que, dans ce cas là, on préférera passer par l’utilisation d’un <strong>IDE (Environnement de développement)</strong> plus adapté. Il en existe de très nombreux, bien que ceux utilisés majoritairement pour développement en Python le sont moins (voir <a href="https://wiki.python.org/moin/PythonEditors">ce lien</a> pour une liste des IDE pour Python).</p>
-<p>Dans notre cas, <strong>Jupyter</strong> sera beaucoup plus utile dans la mesure où il permet également de produire des documents propres (exportables en PDF notamment), intégrant le code Python ainsi que des analyses associées, des commentaires ou une documentation de ce même code.</p>
-<p><strong>Jupyter</strong> sous la forme d’une page web disposant d’un menu dédié et fonctionnant à l’aide de <strong>cellules</strong>. Une cellule peut contenir :</p>
+<p>Jupyter est un outil particulièrement utile lorsqu’on souhaite expérimenter, effectuer des tests ou écrire rapidement un petit script pour remplir une tâche minimale. Il est également possible d’écrire des programmes plus complexes dans un notebook Jupyter bien que, dans ce cas là, on préférera passer par l’utilisation d’un <strong>IDLE (Environnement de développement)</strong> plus adapté. Dans notre cas, <strong>Jupyter</strong> sera beaucoup plus utile dans la mesure où il permet également de produire des documents propres (exportables en PDF notamment), intégrant le code Python ainsi que des analyses associées, des commentaires ou une documentation de ce même code.</p>
+<p><strong>Jupyter</strong> se présente sous la forme d’une page web disposant d’un menu dédié et fonctionnant à l’aide de <strong>cellules</strong>. Une cellule peut contenir :</p>
 <ul class="simple">
 <li><p>Du code Python</p></li>
 <li><p>Du texte, des images, des liens externes (n’importe quel contenu que l’on peut afficher sur un document HTML)</p></li>
 </ul>
+<section id="div-id-environnement-jupyter-3-3-1-installation-et-lancement-de-jupyter-div">
+<h3><div id="Environnement_Jupyter">3. 3. 1. Installation et lancement de Jupyter</div><a class="headerlink" href="#div-id-environnement-jupyter-3-3-1-installation-et-lancement-de-jupyter-div" title="Permalink to this headline">#</a></h3>
+<p>Pour installer Jupyter Notebook, vous devrez utiliser <code class="docutils literal notranslate"><span class="pre">pip</span></code> qui est une commande très classique de l’environnement python. <code class="docutils literal notranslate"><span class="pre">pip</span></code>, de la même manière que <code class="docutils literal notranslate"><span class="pre">conda</span></code> pour celles et ceux qui installé anaconda, permet d’installer des librairies supplémentaires à notre environnement python. C’est une fonction très pratique que vous serez souvent amené à utiliser pour installer des librairies spécifiques à vos champs d’étude, ou à vos objets de recherche : un géographe souhaitera rpidement installer des librairies de cartographie, un sociologue des librairies d’analyse de réseaux,…</p>
+<p>Pour installer Jupyter Notebook, il suffit d’écrire cette commande dans votre terminal :</p>
+<div align="center"><img src="Capture_install_nb.PNG"/></div>
+<p>Une fois le processus d’installation terminé, vous pouvez démarrer notebook en tapant la commande <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> dans votre terminal :</p>
+<div align="center"><img src="Capture_launch_nb.PNG"/></div>
+<p>Cette commande lance un <strong>serveur</strong> sur votre réseau local (localhost), et permet de démarrer Jupyter Notebook. Vous avez donc accès à cette interface, qui vous permet de naviguer dans votre ordinateur, et de créer de nouveaux notebooks.</p>
+<div align="center"><img src="Capture_nb.PNG"/></div>
+</section>
+<section id="div-id-environnement-jupyter-3-3-2-quelques-astuces-div">
+<h3><div id="Environnement_Jupyter">3. 3. 2. Quelques astuces</div><a class="headerlink" href="#div-id-environnement-jupyter-3-3-2-quelques-astuces-div" title="Permalink to this headline">#</a></h3>
 <p>On peut exécuter une cellule indépendamment d’une autre. Cela permet de découper un code complexe en plusieurs étapes élémentaires successives.</p>
 <p>Si l’on peut utiliser le menu de Jupyter pour exécuter les tâches que l’on souhaite, intégrer les raccourcis au fur et à mesure est bien utile pour gagner du temps. Ainsi, pour <strong>exécuter une cellule</strong>, on peut utiliser la combinaison <code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">entrée</span></code>.</p>
 <p><strong>Quelques raccourcis utiles :</strong></p>
@@ -505,8 +566,9 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>Pour avoir un environnement complet de programmation, on peut également utiliser <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a>, qui est installé avec Anaconda.</p>
-<section id="div-id-le-markdown-2-2-2-le-markdown-div">
-<h3><div id="Le Markdown">2. 2. 2. Le Markdown</div><a class="headerlink" href="#div-id-le-markdown-2-2-2-le-markdown-div" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="div-id-le-markdown-3-4-le-markdown-div">
+<h3><div id="Le Markdown">3. 4. Le Markdown</div><a class="headerlink" href="#div-id-le-markdown-3-4-le-markdown-div" title="Permalink to this headline">#</a></h3>
 <p>Les cellules d’un <strong>notebook Jupyter</strong> en <strong>mode texte</strong> interprètent un langage que l’on nomme <strong>Markdown</strong> : il s’agit d’une version du <strong>langage HTML</strong> simplifié qui permet de <strong>structurer des documents textes</strong>.</p>
 <p>Pour passer une cellule en <strong>mode texte</strong>, on peut utiliser le raccourci <code class="docutils literal notranslate"><span class="pre">Esc</span> <span class="pre">+</span> <span class="pre">M</span></code>.</p>
 <p>Une fois que l’on se situe dans une cellule texte, on peut écrire du texte et le structurer ou ajouter des éléments de mise en forme à l’aide du <strong>Markdown</strong>.</p>
